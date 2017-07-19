@@ -9,7 +9,7 @@ chrome_path = r"C:\Selenium\chromedriver.exe"
 number_of_signups = 0
 
 def gen_rand_un():
-    un = "2016JE00"
+    un = "16JE00"
     un += str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9))
     return un
 
@@ -17,7 +17,7 @@ while 1:
         un = gen_rand_un()
 
         driver = webdriver.Chrome(chrome_path)
-        url = r"http://myshoutbox.tk/signup.php"
+        url = r"http://myshoutbox.ml/signup.php"
         driver.get(url)
         
         fname = driver.find_element_by_id("fname1")
@@ -38,11 +38,14 @@ while 1:
         email = driver.find_element_by_id("email1")
         email.send_keys("hacker" + un + "@gmail.com")
 
+        outside = driver.find_element_by_id("log")
+        outside.click()
+        
         btn = driver.find_element_by_name("submit")
         btn.click()
 
         #Waiting to get registered:
-        time.sleep(20)
+        time.sleep(5)
 
         driver.quit()
         
