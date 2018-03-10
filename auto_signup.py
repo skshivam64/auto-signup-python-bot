@@ -45,7 +45,7 @@ while 1:
         btn.click()
 
         #Waiting to get registered:
-        time.sleep(5)
+        time.sleep(10)
 
         driver.quit()
         
