@@ -9,9 +9,9 @@ chrome_path = r"C:\Selenium\chromedriver.exe"
 number_of_signups = 0
 
 def gen_rand_un():
-    un = "16JE00"
-    un += str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9))
-    return un
+    uwn = "16JE00"
+    uwn += str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9)) + str(random.randint(0, 9))
+    return uwn
 
 while 1:
         un = gen_rand_un()
@@ -45,7 +45,7 @@ while 1:
         btn.click()
 
         #Waiting to get registered:
-        time.sleep(5)
+        time.sleep(10)
 
         driver.quit()
         
